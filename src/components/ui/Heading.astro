@@ -1,0 +1,32 @@
+---
+export interface Props{
+  color?: string,
+  size?:string,
+  weight?:string,
+  marginBottom?:string,
+  wrapped?: boolean
+}
+const {color='var(--color-grey-200)', size='24px', weight='500', marginBottom='0px', wrapped=false} = Astro.props as Props;
+---
+{wrapped?
+  <span>
+    <h3 class="heading" style=`color: ${color}; font-size: ${size}; font-weight: ${weight}; margin-bottom: ${marginBottom};`>
+      <slot/>
+    </h3>
+    <p class="sub-heading"><slot name="sub-heading"/></p>
+  </span>
+:
+  <h3 class="heading" style=`color: ${color}; font-size: ${size}; font-weight: ${weight}; margin-bottom: ${marginBottom};`>
+    <slot/>
+  </h3>
+  <p class="sub-heading"><slot name="sub-heading"/></p>   
+}
+<style>
+.heading{
+}
+.sub-heading{
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--color-grey-100);
+}
+</style>

@@ -1,0 +1,22 @@
+---
+export interface Props{
+  src:string,
+}
+
+const {src=""} = Astro.props as Props;
+---
+
+<picture>
+  <img src={src} alt="">
+</picture>
+
+<style>
+  picture{
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  img{
+    width: 100%;
+  }
+</style>

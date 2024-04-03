@@ -1,0 +1,10 @@
+---
+export interface Props{
+  flex?:string
+}
+const {flex=""} = Astro.props as Props;
+---
+
+<div style=`flex: ${flex};`>
+    <slot/>
+</div>

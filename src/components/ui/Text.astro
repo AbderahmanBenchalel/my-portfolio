@@ -1,0 +1,19 @@
+---
+const {size="18px"} = Astro.props
+---
+<p class="text" style=`font-size: ${size};`>
+  <slot/>
+</p>
+
+<style>
+  .text{
+    font-weight: 500;
+    color: var(--color-grey-100);
+    font-family: Montserrat;
+    line-height: 1.3;
+    text-wrap: pretty;
+
+
+  }
+
+</style>

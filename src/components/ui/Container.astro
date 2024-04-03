@@ -1,0 +1,33 @@
+---
+
+---
+
+<div class="container">
+  <slot/>
+</div>
+
+
+<style>
+  .container{
+    padding: 2.2rem;
+    max-width: 104.6rem;
+    border-radius: 12px;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  .container::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    left: calc(100% / 2);
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2.2rem;
+    border-radius: 12px;
+    /* background-color: black; */
+    box-shadow: 0px 4px 32px 0px #0000001F;
+    z-index: -1;
+  }
+</style>
