@@ -1,7 +1,7 @@
 ---
-const {size="18px"} = Astro.props
+const {size="18px", marginBottom="",} = Astro.props
 ---
-<p class="text" style=`font-size: ${size};`>
+<p class="text" style=`font-size: ${size}; margin-bottom: ${marginBottom}`>
   <slot/>
 </p>
 

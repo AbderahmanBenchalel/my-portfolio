@@ -1,0 +1,60 @@
+---
+import Container from "./ui/Container.astro";
+import Flex from "./ui/Flex.astro";
+import Image from "./ui/Image.astro";
+import projectImage from "../../public/project-one.png";
+import Tags from "./ui/Tags.astro";
+import Heading from "./ui/Heading.astro";
+import Text from "./ui/Text.astro";
+import FlexItem from "./ui/FlexItem.astro";
+---
+
+<Container>
+  <Flex wrap="wrap" gap="4.5rem">
+    <FlexItem flex="2 1 20rem">
+      <Image src={projectImage.src}/>
+    </FlexItem>
+    
+    <FlexItem flex="3 1 45rem">
+
+      <Tags marginBottom="2.5rem" tags={['HTML','CSS', 'React']}/>
+      <Heading marginBottom="1.8rem">Omnifood</Heading>
+      <Text marginBottom="4rem">
+        In this project, I work with HTML and CSS to create a responsive page.
+        This page is similiar with instagram profile page. The design is from devchallenge.io
+      </Text>
+      <span class="links">
+        <a class="demoLink" href="#">Demo</a>
+        <a class="codeLink" href="#">Code</a>
+      </span>
+  </FlexItem>
+  </Flex>
+</Container>
+
+
+<style>
+  .links{
+  }
+
+  .links a{
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 12px;
+  }
+
+  .demoLink{
+    display: inline-block;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 13px 38px;
+    margin-right: 1.1rem;
+  }
+
+  .codeLink{
+    color: var(--color-primary);
+    background-color: white ;
+    border: 1px solid var(--color-primary);
+    padding: 12px 35px;
+  }
+</style>
