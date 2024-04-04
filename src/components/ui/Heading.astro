@@ -5,7 +5,8 @@ export interface Props{
   weight?:string,
   marginBottom?:string,
   wrapped?: boolean,
-  subHeading?:boolean
+  subHeading?:boolean,
+  textTransform?:string
 }
 const {color='var(--color-grey-200)', size='24px', weight='500', marginBottom='0px', wrapped=false, subHeading=false} = Astro.props as Props;
 ---

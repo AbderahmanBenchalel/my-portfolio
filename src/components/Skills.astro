@@ -1,0 +1,37 @@
+---
+import Container from "./ui/Container.astro";
+import Flex from "./ui/Flex.astro";
+import FlexItem from "./ui/FlexItem.astro";
+import Heading from "./ui/Heading.astro";
+import Progress from "./ui/Progress.astro";
+---
+
+<Container>
+  <Heading weight="700" size="1.8rem">FRONT END</Heading>
+  <div class="grid">
+    <Progress value="40" label="Astro"></Progress>
+
+    <Progress value="40" label="JavaScript"></Progress>
+    
+    <Progress value="40" label="React Native"></Progress>
+    
+  </div>
+</Container>
+
+<style>
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 2.6rem;
+    column-gap: 5rem;
+  }
+
+  @media (max-width: 37.5em) {
+    .grid{
+      grid-template-columns: 1fr;
+    }
+    html{
+      font-size: 58.5%;
+    }
+  }
+</style>

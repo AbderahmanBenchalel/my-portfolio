@@ -1,0 +1,54 @@
+---
+
+const {value = 0, label=""} = Astro.props;
+---
+
+<div class="progress-container">
+  <label>{label}</label>
+  <div class="progress" >
+    <span class="bar" style=`width: ${value}%`></span>
+    <progress class="experience" max="100" value={value}></progress>
+  </div>
+</div>
+
+
+<style>
+
+  label{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-grey-150);
+    line-height: 0;
+    text-wrap: nowrap;
+    flex-basis: 35%;
+  }
+  .progress-container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .experience{
+    width: 100%;
+    opacity: 0;
+  }
+
+  .progress{
+    background-color: #C4C4C4;
+    border-radius: 12px;
+    height: .9rem;
+    position: relative;
+    flex-basis: 65%;
+  }
+
+  .bar{
+    display: inline-block;
+    position: absolute;
+    background-color: var(--color-primary);
+    border-radius: 12px;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .progress
+</style>
