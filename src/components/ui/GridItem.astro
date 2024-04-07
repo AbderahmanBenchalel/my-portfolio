@@ -1,0 +1,14 @@
+---
+export interface Props{
+  gridRow?:string,
+  gridColumn?:string,
+  justifySelf?:string,
+  alignSelf?:string
+}
+
+const {gridRow="",gridColumn="",alignSelf='', justifySelf=""} = Astro.props as Props;
+---
+
+<div style=`grid-row:${gridRow}; grid-column: ${gridColumn}; justify-self: ${justifySelf}; align-self:${alignSelf}`>
+  <slot/>
+</div>

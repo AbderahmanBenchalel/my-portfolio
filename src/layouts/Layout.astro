@@ -36,16 +36,34 @@
       height: 100dvh;
       padding: 1.8rem;
       padding-top: 7rem;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      display: grid;
+      grid-template-columns: 41rem 1fr;
+      gap: 3.2rem;
+      width: fit-content;
+      margin: 0 auto;
     }
 
-    @media (max-width: 37.5em) {
-    html{
-      font-size: 57%;
+    @media (max-width: 85.4em) {
+      html{
+        font-size: 50%;
+      }
     }
-  }
+    @media (max-width: 62.5em) {
+      body{
+        grid-template-columns: 34rem 1fr;
+        font-size: 45%;
+      }
+    }
+    @media (max-width: 53em) {
+      body{
+        grid-template-columns:1fr;
+      }
+    }
+    @media (max-width: 37.5em) {
+      html{
+        font-size: 40%;
+      }
+    }
   </style>
 </head>
 <body>

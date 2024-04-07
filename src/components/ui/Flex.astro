@@ -4,14 +4,16 @@ export interface Props{
   align?:string,
   gap?:string,
   wrap?:string,
+  Element?:string,
+  direction?:string
 }
 
-const {align='', gap='', wrap='', justify=''} = Astro.props as Props;
+const {align='', gap='', wrap='', justify='', Element='div',direction='row'} = Astro.props as Props;
 ---
 
-<div class="flex" style=`align-items: ${align}; gap: ${gap}; flex-wrap: ${wrap}; justify-content: ${justify}; `>
+<Element class="flex" style=`align-items: ${align}; gap: ${gap}; flex-wrap: ${wrap}; justify-content: ${justify}; flex-direction: ${direction}; `>
   <slot/>
-</div>
+</Element>
 
 <style>
   .flex{

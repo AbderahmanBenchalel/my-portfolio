@@ -6,22 +6,24 @@ export interface Props{
   marginBottom?:string,
   wrapped?: boolean,
   subHeading?:boolean,
-  textTransform?:string
+  textTransform?:string,
+  Element?:string
 }
-const {color='var(--color-grey-200)', size='24px', weight='500', marginBottom='0px', wrapped=false, subHeading=false} = Astro.props as Props;
+const {color='var(--color-grey-200)', size='24px', weight='500', marginBottom='0px', wrapped=false, subHeading=false, Element='h3'} = Astro.props as Props;
 ---
 {wrapped?
   <span>
-    <h3 class="heading" style=`color: ${color}; font-size: ${size}; font-weight: ${weight}; margin-bottom: ${marginBottom};`>
+    <Element class="heading" style=`color: ${color}; font-size: ${size}; font-weight: ${weight}; margin-bottom: ${marginBottom};`>
       <slot/>
-    </h3>
+    </Element>
     {subHeading && <p class="sub-heading"><slot name="sub-heading"/></p>}
   </span>
 :
 <>
-  <h3 class="heading" style=`color: ${color}; font-size: ${size}; font-weight: ${weight}; margin-bottom: ${marginBottom};`>
+  <Element
+   class="heading" style=`color: ${color}; font-size: ${size}; font-weight: ${weight}; margin-bottom: ${marginBottom};`>
     <slot/>
-  </h3>
+  </Element>
   {subHeading && <p class="sub-heading"><slot name="sub-heading"/></p>} 
 </>    
 }
