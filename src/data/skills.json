@@ -1,0 +1,38 @@
+[
+  {
+    "skillName": "HTML",
+    "avgStrength": "85"
+  },
+  {
+    "skillName": "CSS",
+    "avgStrength": "75"
+  },
+  {
+    "skillName": "JavaScript",
+    "avgStrength": "80"
+  },
+  {
+    "skillName": "React",
+    "avgStrength": "90"
+  },
+  {
+    "skillName": "Tailwind",
+    "avgStrength": "60"
+  },
+  {
+    "skillName": "Styled Comps",
+    "avgStrength": "75"
+  },
+  {
+    "skillName": "Redux",
+    "avgStrength": "80"
+  },
+  {
+    "skillName": "React Router",
+    "avgStrength": "50"
+  },
+  {
+    "skillName": "Git/Github",
+    "avgStrength": "60"
+  }
+]
