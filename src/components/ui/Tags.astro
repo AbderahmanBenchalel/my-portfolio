@@ -7,7 +7,7 @@ export interface Props{
 const {tags=[], marginBottom=""} = Astro.props as Props;
 ---
 <div style=`margin-bottom: ${marginBottom};`>
-  {tags.map(tag=><span class="tag">#{tag}</span>)}
+  {tags.map(tag=><span class={`tag #${tag}`}>#{tag}</span>)}
 </div>
 
 <style>

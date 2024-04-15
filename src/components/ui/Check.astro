@@ -1,0 +1,35 @@
+---
+const {value=""} = Astro.props;
+
+---
+
+<button value={"#"+value} class="not-checked"><slot/></button>
+
+
+
+<style>
+  button{
+    padding: .8rem 2.2rem;
+    border-radius: 1.2rem;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  button::first-letter{
+    text-transform: uppercase;
+  }
+
+  .checked{
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+  }
+
+  .not-checked{
+    background-color: transparent;
+    border: 1px solid var(--color-grey-150);
+    color: var(--color-grey-150);
+  }
+
+</style>

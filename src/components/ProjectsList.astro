@@ -1,0 +1,171 @@
+---
+import Project from "./Project.astro"
+import Check from "./ui/Check.astro";
+import Container from "./ui/Container.astro";
+---
+<Container>
+  Projects
+  <Check value="react">react</Check>
+  <Check value="angular">angular</Check>
+  <Check value="vue">vue</Check>
+</Container>
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+    <div class="swiper-slide"><Project/></div>
+  </div>
+
+  <div class="absolute-line">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+
+<script>
+  import Swiper from 'swiper/bundle';
+  import 'swiper/css/bundle';
+
+  const swiper = new Swiper('.swiper', {
+  loop: false,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    670: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    1000: {
+      slidesPerView: 3,
+      spaceBetween: 15
+    }
+  },
+  
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+    renderBullet(index, className) {
+      console.log(className)
+        return `<span class="${className} bullet">${index + 1}</span>`
+    },
+    
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  });
+
+  // const tags = document.querySelectorAll('.tag');
+  // // console.log(tags)
+  // const buttons = document.querySelectorAll(".not-checked");
+
+  // buttons.forEach((button,i)=>{
+  //   button.addEventListener('click',(e)=>{
+  //     button.classList.toggle('not-checked');
+  //     button.classList.toggle('checked');
+
+  //     if(button.classList.contains('checked')){
+  //       filter(button.value);
+  //     }
+  //   })
+  // })
+
+
+  // function filter(checkValue){
+
+  //   tags.forEach(tag=>{
+  //     if(!tag.classList.contains(checkValue)){
+  //       tag.closest(".swiper-slide").style.display = "none";
+  //     }else{
+  //       tag.closest(".swiper-slide").style.display = "block";
+  //     }
+  //   })
+
+  // }
+</script>
+
+
+<style is:global>
+  div.swiper{
+    max-width: 104.6rem;
+    width: auto;
+    margin: 0;
+    position: relative;
+  }
+
+  .absolute-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6rem;
+    margin-top: 3rem;
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  div.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets{
+    position: static;
+    transform: translateX(0);
+    width: fit-content;
+  }
+
+  span.swiper-pagination-bullet.bullet{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: transparent;
+    border: 1px solid var(--color-grey-150);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-grey-150);
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  span.swiper-pagination-bullet-active.bullet{
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+  }
+
+  div.swiper-button-next,div.swiper-button-prev{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    background-color: transparent;
+    border: 1px solid var(--color-grey-150);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--color-grey-150);
+    opacity: 1;
+    position: static;
+    margin-top: 0;
+  }
+
+  div.swiper-button-next::after,div.swiper-button-prev::after{
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+</style>

@@ -12,27 +12,20 @@ import ExperiencesList from "../components/ExperiencesList.astro";
 import GridItem from "../components/ui/GridItem.astro";
 import Flex from "../components/ui/Flex.astro";
 import FlexItem from "../components/ui/FlexItem.astro";
+import ProjectsList from "../components/ProjectsList.astro";
 
 
 ---
 
 <Layout>
-	<Flex direction="column" gap="4.5rem">
-		<PersonalDetails/>
-		<ExperiencesList/>
-	</Flex>
-	
-	<Flex direction="column" gap="4.5rem">
-		<Skills/>
-		<Flex gap="3.6rem" direction="column">
-			<Project/>
-			<Project/>
-			<Project/>
+		<Flex direction="column" gap="4.5rem" marginBottom="4.5rem">
+			<PersonalDetails/>
+			<ExperiencesList/>
 		</Flex>
-	</Flex>
-	
-	
-
+		<Flex direction="column" gap="4.5rem">
+			<Skills/>
+			<ProjectsList/>
+		</Flex>
 </Layout>
 
 <style>
