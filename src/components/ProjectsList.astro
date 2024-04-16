@@ -2,27 +2,17 @@
 import Project from "./Project.astro"
 import Check from "./ui/Check.astro";
 import Container from "./ui/Container.astro";
+
+import projectsList from "../data/projects.json";
+import Heading from "./ui/Heading.astro";
 ---
 <Container>
-  Projects
-  <Check value="react">react</Check>
-  <Check value="angular">angular</Check>
-  <Check value="vue">vue</Check>
+  <Heading>Projects</Heading>
 </Container>
 
 <div class="swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
-    <div class="swiper-slide"><Project/></div>
+    {projectsList.map(project=><div class="swiper-slide"><Project data={project}/></div>)}
   </div>
 
   <div class="absolute-line">

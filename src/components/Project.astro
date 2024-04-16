@@ -7,25 +7,33 @@ import Tags from "./ui/Tags.astro";
 import Heading from "./ui/Heading.astro";
 import Text from "./ui/Text.astro";
 import FlexItem from "./ui/FlexItem.astro";
+
+const {data} = Astro.props;
+
+const {
+title,
+tags,
+thumbnail,
+description,
+demo,
+code
+} = data;
 ---
 
 <Container>
   <Flex wrap="wrap" gap="4.5rem">
     <FlexItem flex="2 1 20rem">
-      <Image src={projectImage.src}/>
+      <Image src={thumbnail}/>
     </FlexItem>
     
     <FlexItem flex="3 1 45rem">
 
-      <Tags marginBottom="2.5rem" tags={['HTML','CSS', 'React']}/>
-      <Heading marginBottom="1.8rem">Omnifood</Heading>
-      <Text marginBottom="4rem">
-        In this project, I work with HTML and CSS to create a responsive page.
-        This page is similiar with instagram profile page. The design is from devchallenge.io
-      </Text>
+      <Tags marginBottom="2.5rem" tags={tags}/>
+      <Heading marginBottom="1.8rem">{title}</Heading>
+      <Text marginBottom="4rem">{description}</Text>
       <span class="links">
-        <a class="demoLink" href="#">Demo</a>
-        <a class="codeLink" href="#">Code</a>
+        <a class="demoLink" href={demo}>Demo</a>
+        <a class="codeLink" href={code}>Code</a>
       </span>
   </FlexItem>
   </Flex>

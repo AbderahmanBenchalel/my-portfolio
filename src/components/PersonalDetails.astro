@@ -1,7 +1,5 @@
 ---
 import Image from "./ui/Image.astro";
-
-import personalData from '../data/personal.json';
 import Container from "./ui/Container.astro";
 import Heading from "./ui/Heading.astro";
 import Contact from "./ui/Contact.astro";
@@ -9,28 +7,27 @@ import Text from "./ui/Text.astro";
 import Flex from "./ui/Flex.astro";
 import FlexItem from "./ui/FlexItem.astro";
 
+import personalData from '../data/personal.json';
 
+const {name, title, photo, about} = personalData;
 
 ---
 <Container >
   <Flex align="flex-start" gap="2.4rem" wrap="wrap">
     <FlexItem flex="1 1 15rem">
-      <Image src={personalData.photo}/>
+      <Image src={photo}/>
     </FlexItem>
 
     <FlexItem flex="3 1 45rem">
       <div class="head">
-        <Heading weight="600" wrapped>
-        {personalData.name}
-        <Fragment slot="sub-heading">Frontend Developer</Fragment>
+        <Heading weight="600" wrapped subHeading>
+        {name}
+        <Fragment slot="sub-heading">{title}</Fragment>
         </Heading>
         <Contact/>
       </div>
 
-      <Text>
-        Self-motivated developer, who is willing to learn and create outstanding UI applications. 
-        Donec aliquam est dui, vel vestibulum diam sollicitudin id. Quisque feugiat malesuada molestie. 
-      </Text>
+      <Text>{about}</Text>
     </FlexItem>
   </Flex>
 </Container>

@@ -16,11 +16,15 @@
     "avgStrength": "90"
   },
   {
+    "skillName": "Astro js",
+    "avgStrength": "40"
+  },
+  {
     "skillName": "Tailwind",
     "avgStrength": "60"
   },
   {
-    "skillName": "Styled Comps",
+    "skillName": "Styled Compons",
     "avgStrength": "75"
   },
   {

@@ -1,11 +1,21 @@
+---
+import IcEmail from './IcEmail.astro';
+import IcPhone from './IcPhone.astro';
+import IcLinkedin from './IcLinkedin.astro';
+
+import personalData from '../../data/personal.json';
+
+const {email, phoneNumber, linkedin} = personalData;
+---
+
 <div class="contact">
   <span class="row">
-    <!-- <Icon/> -->
-    <a href="mailto:billy@example.com">billy@example.com</a>
+    <IcEmail/>
+    <a href=`mailto:${email}`>{email}</a>
   </span>
   <span class="row">
-    <!-- <Icon/> -->
-    <a href="tel:(+603) 546 624 342">(+603) 546 624 342</a>
+    <IcLinkedin/>
+    <a href={linkedin}>Linkedin Profile</a>
   </span>
 </div>
 

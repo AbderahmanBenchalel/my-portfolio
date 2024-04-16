@@ -3,12 +3,13 @@ import Experience from "./Experience.astro";
 import Container from "./ui/Container.astro";
 import Flex from "./ui/Flex.astro";
 import Heading from "./ui/Heading.astro";
+
+import experiencesList from "../data/experiences.json";
 ---
 
 <Container>
   <Heading color="var(--color-grey-150)" marginBottom="4.4rem">Experiences</Heading>
   <Flex Element="ul" gap="4rem" wrap="wrap">
-    <Experience />
-    
+    {experiencesList.map(experience=><Experience data={experience}/>)}
   </Flex>
 </Container>

@@ -25,18 +25,18 @@
   },
   {
     "title": "Button Component",
-    "tags": ["React", "Context API", "CSS modules"],
+    "tags": ["React", "Styled Components"],
     "thumbnail": "/public/Button-component.png",
     "description": "This project is a reusable button component for React developers. It provides several customization options, such as color styles, button variants, and more...",
-    "demo": "https://your-car-website.vercel.app/",
-    "code": "https://github.com/AbderahmanBenchalel/your-car-website"
+    "demo": "https://button-component-sand.vercel.app/",
+    "code": "https://github.com/AbderahmanBenchalel/button-component"
   },
   {
     "title": "YourCar",
-    "tags": ["React", "Styled Components"],
+    "tags": ["React", "Context API", "CSS modules"],
     "thumbnail": "/public/YourCar.png",
     "description": "YourCar is a React-based landing page project that offers users a seamless experience for browsing and interacting with car products.",
-    "demo": "https://button-component-sand.vercel.app/",
-    "code": "https://github.com/AbderahmanBenchalel/button-component"
+    "demo": "https://your-car-website.vercel.app/",
+    "code": "https://github.com/AbderahmanBenchalel/your-car-website"
   }
 ]

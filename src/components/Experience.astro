@@ -5,19 +5,19 @@ import Heading from "./ui/Heading.astro";
 import Image from "./ui/Image.astro";
 import Text from "./ui/Text.astro";
 import albonyan from '../../public/Albonyan.jpg';
+
+const {data} = Astro.props;
+const {title, companyName, companyLogo, duration, description} = data;
 ---
 
 <Flex Element="li" gap="1.6rem">
   <FlexItem flex="0 0 8.4rem">
-    <Image radius="0px" src={albonyan.src}/>
+    <Image radius="0px" src={companyLogo}/>
   </FlexItem>
 
   <FlexItem flex="1 0 0">
-    <Text size="14px" marginBottom="1.2rem">Feb 2017 - Current</Text>
-    <Heading Element="h4" weight="600" size="16px" marginBottom="3.3rem">Frontend Engineer</Heading>
-    <Text size="16px" marginBottom="1.6rem">
-      Donec aliquam est dui, vel vestibulum diam sollicitudin id. 
-      Quisque feugiat malesuada molestie.
-    </Text>
+    <Text size="14px" marginBottom="1.2rem">{duration}</Text>
+    <Heading Element="h4" weight="600" size="16px" marginBottom="3.3rem">{title}</Heading>
+    <Text size="16px" marginBottom="1.6rem">{description}</Text>
   </FlexItem>
 </Flex>
