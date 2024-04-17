@@ -11,10 +11,15 @@ const {tags=[], marginBottom=""} = Astro.props as Props;
 </div>
 
 <style>
+  div{
+    height: 6rem;
+  }
   .tag{
     font-size: 16px;
     font-weight: 500;
     color: var(--color-grey-150);
     margin-right: .9rem;
+    display: inline-block;
+    line-height: 1.5;
   }
 </style>

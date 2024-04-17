@@ -2,7 +2,7 @@
   {
     "title": "Appie",
     "tags": ["HTML", "CSS"],
-    "thumbnail": "/public/Appie.png",
+    "thumbnail": "/Appie.png",
     "description": "Appie is a responsive landing page for a fictional startup, showcasing my HTML and CSS skills, and responsive design.",
     "demo": "https://appie-benchalel.netlify.app/",
     "code": "https://github.com/AbderahmanBenchalel/HTML-CSS-projects/tree/main/Appie-landing-page"
@@ -10,7 +10,7 @@
   {
     "title": "Kanban Board",
     "tags": ["HTML", "CSS", "JavaScript", "Localstorage"],
-    "thumbnail": "/public/Kanban-board.png",
+    "thumbnail": "/Kanban-board.png",
     "description": "The project is a task management app featuring categories for not started, in progress, and completed tasks, with drag-and-drop functionality.",
     "demo": "https://kanbanbenchalel.netlify.app/",
     "code": "https://github.com/AbderahmanBenchalel/Vanilla-JS-Projects/tree/main/9-kanban-board"
@@ -18,7 +18,7 @@
   {
     "title": "Salat Timer",
     "tags": ["HTML", "CSS", "React"],
-    "thumbnail": "/public/Salat-timer.png",
+    "thumbnail": "/Salat-timer.png",
     "description": "The Salat Timer app is a React application designed to help users keep track of their daily prayers. It provides accurate prayer times based on location.",
     "demo": "https://salat-timer-app.vercel.app/",
     "code": "https://github.com/AbderahmanBenchalel/salat-timer-app"
@@ -26,7 +26,7 @@
   {
     "title": "Button Component",
     "tags": ["React", "Styled Components"],
-    "thumbnail": "/public/Button-component.png",
+    "thumbnail": "/Button-component.png",
     "description": "This project is a reusable button component for React developers. It provides several customization options, such as color styles, button variants, and more...",
     "demo": "https://button-component-sand.vercel.app/",
     "code": "https://github.com/AbderahmanBenchalel/button-component"
@@ -34,7 +34,7 @@
   {
     "title": "YourCar",
     "tags": ["React", "Context API", "CSS modules"],
-    "thumbnail": "/public/YourCar.png",
+    "thumbnail": "/YourCar.png",
     "description": "YourCar is a React-based landing page project that offers users a seamless experience for browsing and interacting with car products.",
     "demo": "https://your-car-website.vercel.app/",
     "code": "https://github.com/AbderahmanBenchalel/your-car-website"

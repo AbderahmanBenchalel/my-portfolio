@@ -1,14 +1,15 @@
 ---
 export interface Props{
   src:string,
-  radius?:string
+  radius?:string,
+  height?:string
 }
 
-const {src="",radius="12px"} = Astro.props as Props;
+const {src="",radius="12px",height=""} = Astro.props as Props;
 ---
 
-<picture style=`border-radius: ${radius};`>
-  <img src={src} alt="">
+<picture style=`border-radius: ${radius}; height: ${height};`>
+  <img src={src} alt="" style=`border-radius: ${radius};`/>
 </picture>
 
 <style>
@@ -18,5 +19,7 @@ const {src="",radius="12px"} = Astro.props as Props;
   }
   img{
     width: 100%;
+    margin: auto;
+
   }
 </style>
